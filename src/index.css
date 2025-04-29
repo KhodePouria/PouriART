@@ -1,0 +1,109 @@
+:root {
+  background-color: #242424;
+  font-family: aeronaut;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.white-space {
+  z-index: 10;
+  position: relative;
+}
+
+.cloud-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mountain {
+  max-width: 20vw;
+  height: auto;
+  padding-left: 20vw;
+  padding-top: 200px;
+  z-index: 1;
+}
+
+.clouds {
+  margin-bottom: 0;
+  margin-top: -250px;
+  width: 100%;
+  height: auto;
+  z-index: 2; /* Keep clouds behind text */
+}
+
+.name-intro {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #1E1E1E;
+  text-align: center;
+  z-index: 11; /* Ensure text is above clouds */
+}
+
+@font-face {
+  font-family: "aeronaut";
+  src: url("./fonts/poiaeronauttrial-regular.otf") format("truetype");
+}
+
+.person-box {
+  display: flex;
+}
+
+.picture-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1px;
+}
+
+.profile-pic {
+  max-width: 10vw;
+  height: auto;
+  object-fit: cover;
+  border-radius: 80px;
+  border: 7.5px solid rgba(255, 255, 255, 0.87);
+  margin: 2.5vh;
+}
+
+/* Media Queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .mountain {
+    max-width: 40vw;
+    padding-left: 10vw;
+    padding-top: 150px;
+  }
+  
+  .clouds {
+    margin-top: -150px;
+  }
+  
+  .name-intro {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mountain {
+    max-width: 50vw;
+    padding-left: 5vw;
+    padding-top: 100px;
+  }
+  
+  .clouds {
+    margin-top: -100px;
+  }
+  
+  .name-intro {
+    font-size: 3rem;
+  }
+  
+  .profile-pic {
+    max-width: 25vw;
+    border-width: 5px;
+  }
+}
